@@ -10,6 +10,9 @@ retro_damage_hurt_ouch_51.wav: monster damage
 voice_female_c_hurt_pain_01.wav: player damage
 collect_item_12.wav: potion pickup
 retro_collect_pickup_coin_09.wav: coin pickup
+etfx_shoot_fireball.wav: each falling meteor
+etfx_explosion_dark02.wav: each meteor ground impact
 
 Source collection: Gamemaster Audio - Pro Sound Collection.
+Meteor sounds source collection: Epic Toon FX.
 These audio files are included for use in this game, not as a standalone audio pack.
