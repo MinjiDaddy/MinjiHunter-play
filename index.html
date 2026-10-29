@@ -1,14 +1,15 @@
 <!doctype html>
 <html lang="ko">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover"><meta name="theme-color" content="#142821"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="description" content="민지 헌터 — 픽셀 숲을 탐험하는 세로형 액션 플랫포머"><title>MINJI HUNTER · 숲의 첫걸음</title><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><text y=%2226%22 font-size=%2227%22>🌿</text></svg>">  <script type="module" crossorigin src="./assets/index-C_lkQu2P.js"></script>
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover"><meta name="theme-color" content="#142821"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="description" content="민지 헌터 — 픽셀 숲을 탐험하는 세로형 액션 플랫포머"><title>MINJI HUNTER · 숲의 첫걸음</title><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><text y=%2226%22 font-size=%2227%22>🌿</text></svg>">  <script type="module" crossorigin src="./assets/index-YPCAVyEb.js"></script>
   <link rel="modulepreload" crossorigin href="./assets/phaser-DFK5Ua9d.js">
-  <link rel="stylesheet" crossorigin href="./assets/index-1lKb6pLz.css">
+  <link rel="stylesheet" crossorigin href="./assets/index-D4NGebxz.css">
 </head>
 <body>
 <main id="console" aria-label="민지 헌터 게임">
  <section id="screen" aria-label="게임 화면">
   <div id="game"></div>
   <div class="score-display" aria-label="스코어"><small>SCORE</small><b id="score-number">000000</b></div>
+  <div class="time-display" aria-label="남은 시간"><small>TIME</small><b id="time-number">5:00:00</b></div>
   <header class="hud"><div class="brand"><span class="eyebrow">FOREST CHAPTER / 01</span><h1>MINJI HUNTER<span>민지 헌터</span></h1></div><button id="sound" aria-label="음악·효과음 끄기" title="음악·효과음">♫</button><button id="fullscreen" aria-label="전체 화면" title="전체 화면">⛶</button></header>
   <div class="status"><span class="portrait">✦</span><div><div class="health"><i></i><i></i><i></i><i></i><i></i></div><div class="mana-track"><div id="mana"></div></div></div><span id="mana-number">100</span></div>
   <div class="wallet" aria-label="획득 동전"><span aria-hidden="true">●</span><b id="coin-count">0</b></div>
@@ -26,7 +27,7 @@
  </section>
  <section id="results" hidden aria-label="최종 기록과 공유 랭킹">
   <small>MINJI HUNTER / FINAL SCORE</small><h2 id="result-title">GAME OVER</h2><strong id="final-score">000000</strong>
-  <p id="own-result"></p><p id="rank-status" role="status"></p>
+  <p id="score-breakdown"></p><p id="own-result"></p><p id="rank-status" role="status"></p>
   <form id="rank-form" hidden><label for="rank-name">랭킹에 남길 이름</label><div><input id="rank-name" maxlength="12" autocomplete="nickname" placeholder="이름 (최대 12자)" required><button type="submit">등록</button></div></form>
   <h3>WORLD RANKING <span>TOP 20</span></h3><ol id="rank-list"></ol>
   <button id="rank-retry" hidden>랭킹 다시 연결</button><button id="result-restart">다시 도전 ↻</button>
