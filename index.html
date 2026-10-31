@@ -1,12 +1,24 @@
 <!doctype html>
 <html lang="ko">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover"><meta name="theme-color" content="#142821"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="description" content="민지 헌터 — 픽셀 숲을 탐험하는 세로형 액션 플랫포머"><title>MINJI HUNTER · 숲의 첫걸음</title><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><text y=%2226%22 font-size=%2227%22>🌿</text></svg>">  <script type="module" crossorigin src="./assets/game-FGLnoTX2.js"></script>
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover"><meta name="theme-color" content="#142821"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="description" content="민지 헌터 — 픽셀 숲을 탐험하는 세로형 액션 플랫포머"><title>MINJI HUNTER · 숲의 첫걸음</title><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><text y=%2226%22 font-size=%2227%22>🌿</text></svg>">  <script type="module" crossorigin src="./assets/game-BRrrNyPs.js"></script>
   <link rel="modulepreload" crossorigin href="./assets/ranking-api-DnicBaih.js">
   <link rel="modulepreload" crossorigin href="./assets/phaser-DFK5Ua9d.js">
-  <link rel="stylesheet" crossorigin href="./assets/game-B1Zs-aMv.css">
+  <link rel="stylesheet" crossorigin href="./assets/game-DJYI72mL.css">
 </head>
 <body>
-<main id="console" aria-label="민지 헌터 게임">
+<main id="console" class="selecting" aria-label="민지 헌터 게임">
+ <section id="character-select" aria-labelledby="character-heading" data-selected="minji">
+  <header class="selection-heading"><small>MINJI HUNTER</small><h2 id="character-heading">캐릭터 선택</h2></header>
+  <div class="character-stage"><canvas id="character-preview" width="128" height="112" role="img" aria-label="민지 캐릭터 미리보기"></canvas><h3 id="character-name">민지</h3></div>
+  <div class="character-grid" role="group" aria-label="캐릭터 목록">
+   <button class="character-card" data-character="minji" aria-pressed="true" aria-label="민지 선택"><canvas width="128" height="112" aria-hidden="true"></canvas><b>민지</b></button>
+   <button class="character-card" data-character="cherry" aria-pressed="false" aria-label="체리 선택"><canvas width="128" height="112" aria-hidden="true"></canvas><b>체리</b></button>
+   <button class="character-card reserved" disabled aria-label="세 번째 캐릭터 준비 중"><span aria-hidden="true">?</span></button>
+   <button class="character-card reserved" disabled aria-label="네 번째 캐릭터 준비 중"><span aria-hidden="true">?</span></button>
+  </div>
+  <p id="character-status" role="status"></p>
+  <button id="character-start" disabled>캐릭터 불러오는 중…</button>
+ </section>
  <section id="screen" aria-label="게임 화면">
   <div id="game"></div>
   <div class="score-display" aria-label="스코어"><small>SCORE</small><b id="score-number">000000</b></div>
@@ -17,7 +29,7 @@
   <div class="equipment"><img id="weapon-icon" alt=""><b id="weapon-name">검</b><span id="buffs"></span></div>
   <div class="location"><span>✧</span> <span id="stage-name">햇살이 머무는 숲</span> <small>자유 탐험</small></div>
   <div id="loading"><span>✦</span><h2>숲으로 가는 중</h2><div><i id="load-progress"></i></div><p>나뭇잎 사이로, 새로운 모험.</p></div>
-  <div id="pause" hidden><span class="eyebrow">TAKE A BREATH</span><h2>잠시 쉬어가기</h2><p>START를 누르면 모험이 이어집니다.</p><button id="resume">계속하기 ▷</button></div>
+  <div id="pause" hidden><span class="eyebrow">TAKE A BREATH</span><h2>잠시 쉬어가기</h2><p>START를 누르면 모험이 이어집니다.</p><button id="resume">계속하기 ▷</button><button id="change-character">캐릭터 선택 · 새 모험</button></div>
  </section>
  <section id="controls" aria-label="게임 컨트롤러">
   <div class="controller-top"><span>✦ FOREST EXPLORER</span><span id="connection">ARCADE MODE</span></div>
@@ -32,7 +44,7 @@
   <p id="score-breakdown"></p><p id="own-result"></p><p id="rank-status" role="status"></p>
   <form id="rank-form" hidden><label for="rank-name">랭킹에 남길 이름</label><div><input id="rank-name" maxlength="12" autocomplete="nickname" placeholder="이름 (최대 12자)" required><button type="submit">등록</button></div></form>
   <h3>WORLD RANKING <span>TOP 100</span></h3><ol id="rank-list"></ol>
-  <button id="rank-retry" hidden>랭킹 다시 연결</button><button id="result-restart">다시 도전 ↻</button>
+  <button id="rank-retry" hidden>랭킹 다시 연결</button><button id="result-restart">다시 도전 ↻</button><button id="result-character">캐릭터 선택</button>
  </section>
 </main>
 </body></html>
